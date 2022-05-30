@@ -1,0 +1,10 @@
+connections
+.env
+
+Migrations
+
+Seeders
+- data တကြောင်းစီသွင်းချင်ရင် / တူညီတဲ့ data အများကြီး သ္ငင်းချင်ရင် loop ပတ်
+
+Factories
+- မတူညီတဲ့ data တွေ အများကြီးသွင်းချင်ရင်
