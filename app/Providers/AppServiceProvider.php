@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Test;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind("test",function(){ // bind or singleton
+            return new Test("Moe Lay");
+        });
     }
 
     /**
@@ -21,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot() // bind လုပ်ပြီးသွားရင် လိုချင်တဲ့ function/ logic code တွေ ရေး။
     {
         //
     }

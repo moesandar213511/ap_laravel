@@ -1,0 +1,35 @@
+@extends('layout')
+
+@section('content')
+    {{-- <?php
+        foreach ($data as $key => $value) {
+            echo $key." => ".$value."<br>";
+        }
+    ?> --}}
+    {{-- laravel blade looping --}}
+    {{-- @foreach ($data as $key => $value)
+        {{$key.' => '.$value}}
+    @endforeach --}}
+
+    {{-- ====================================================== --}}
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                Contents
+            </div>
+            <div class="card-body">
+                <div>
+                    <h5 class="card-title">{{$post->name}}</h5>
+                    <p class="card-text" style="font-style:italic">{{"Category : ".$post->categories->name}}</p>
+                    <p class="card-text">{{$post->description}}</p>
+                </div><hr>
+                <div>
+                    <a href="/posts" class="btn btn-success">Back</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+@endsection
